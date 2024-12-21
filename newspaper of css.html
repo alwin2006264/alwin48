@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Page Newspaper Article</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+            background-repeat: repeat;
+        }
+
+        /* General layout for the newspaper container */
+        .container {
+            max-width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Page style */
+        .page {
+            display: none; /* Hide pages initially */
+        }
+
+        .active {
+            display: block; /* Show active page */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #000;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Article section */
+        .article {
+            margin-top: 20px;
+        }
+
+        .article h2 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .article p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .article img {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* Sidebar with related links */
+        .sidebar {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .sidebar h3 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .sidebar a {
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+            border-top: 1px solid #000;
+            margin-top: 40px;
+            color: #555;
+        }
+
+        /* Button style */
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Page 1 -->
+        <div class="page active" id="page1">
+            <header>
+                <h1>Global News Today</h1>
+                <p class="date">December 20, 2024</p>
+            </header>
+
+            <div class="article">
+                <h2>Major Breakthrough in Space Exploration</h2>
+                <p>Scientists from the International Space Agency (ISA) have announced a major breakthrough in space exploration, one that could revolutionize humanity’s understanding of the universe. This new discovery, made by a team of astrophysicists, promises to offer insights into the nature of dark matter and the formation of black holes.</p>
+
+                <img src="file:///C:/Users/dell/OneDrive/Pictures/black%20hole" alt="Space Image">
+
+                <p>The breakthrough is the result of years of research and experimentation, involving advanced telescopes and cutting-edge simulations. Experts suggest that this discovery could lead to significant advancements in space technology, paving the way for more efficient space travel and exploration of distant galaxies.</p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Related Articles</h3>
+                <a href="https://www.bing.com/news/search?q=Space+Mission+Update&eventans=1&eventland=1&eventrel=1&qpvt=space+mission+update&FORM=EWRE">Space Mission Update</a>
+                <a href="https://www.example.com/new-technologies-in-space-exploration">New Technologies in Space Exploration</a>
+                <a href="https://www.example.com/astronauts-share-their-experience">Astronauts Share Their Experience</a>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page" id="page2">
+            <div class="article">
+                <h2>Future of Mars Exploration</h2>
+                <p>As humanity turns its focus towards Mars, experts have been working tirelessly on plans to send humans to the Red Planet. NASA’s upcoming Mars mission, expected to launch in 2026, is set to provide unprecedented insight into the planet’s surface and its potential to sustain life.</p>
+
+                <img src="C:\Users\dell\OneDrive\Pictures\mars.jpg" alt="Mars Image">
+
+                <p>As part of the mission, new technologies in aerodynamics and robotics will be tested, offering the possibility of uncovering new scientific discoveries about Mars. Scientists believe that there could be traces of ancient life beneath the surface, which could forever change our understanding of the universe.</p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Related Articles</h3>
+                <a href="https://www.example.com/mars-mission-update">Mars Mission Update</a>
+                <a href="https://www.example.com/technological-advancements-in-space">Technological Advancements in Space</a>
+                <a href="https://www.example.com/life-on-mars">Life on Mars: Is It Possible?</a>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="page" id="page3">
+            <div class="article">
+                <h2>The Role of Artificial Intelligence in Space Travel</h2>
+                <p>Artificial Intelligence (AI) is expected to play a crucial role in the future of space travel. With its ability to process large datasets, AI will help astronauts make better decisions in space and optimize mission planning. Experts are already experimenting with AI systems that could work autonomously to manage spacecraft.</p>
+
+                <img src="C:\Users\dell\OneDrive\Pictures\ai.jpg" alt="AI in Space Image">
+
+                <p>AI will also be used to analyze data from distant planets, helping researchers uncover the mysteries of space more efficiently. As AI technology continues to advance, its integration into space missions could drastically improve how we explore the unknown.</p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Related Articles</h3>
+                <a href="https://www.example.com/ai-in-space-travel">AI in Space Travel</a>
+                <a href="https://www.example.com/space-exploration-and-automation">Automation in Space Exploration</a>
+                <a href="https://www.example.com/future-of-ai-in-space">The Future of AI in Space Missions</a>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+            <button class="btn" onclick="showPage(1)">Page 1</button>
+            <button class="btn" onclick="showPage(2)">Page 2</button>
+            <button class="btn" onclick="showPage(3)">Page 3</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Global News Today. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to change the active page
+        function showPage(pageNumber) {
+            // Hide all pages
+            let pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            let selectedPage = document.getElementById('page' + pageNumber);
+            selectedPage.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
