@@ -1,0 +1,135 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWARENESS  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .page {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .page img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showPage('home')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="showPage('about')">About</a></li>
+                <li><a href="javascript:void(0);" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <h1>Welcome to the Awareness Website</h1>
+            <p>Learn more about this important issue.</p>
+            <img src="C:\Users\dell\OneDrive\Pictures\awareness.jpg" alt="Awareness Image">
+            <p><a href="https://www.awareness-link.com" target="_blank">Learn More</a></p>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page hidden">
+            <h1>About This Cause</h1>
+            <p>This cause aims to spread awareness on various issues affecting our world today.</p>
+            <img src="https://via.placeholder.com/400" alt="About Image">
+            <p><a href="https://www.bing.com/videos/riverview/relatedvideo?&q=awareness+images&&mid=63D1C15CF11803261A6663D1C15CF11803261A66&&FORM=VRDGAR" target="_blank">Read More</a></p>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page hidden">
+            <h1>Contact Us</h1>
+            <p>If you would like to get involved or learn more, feel free to reach out!</p>
+            <form action="mailto:example@domain.com" method="POST" enctype="text/plain">
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Awareness Website</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.add('hidden'));  // Hide all pages
+            document.getElementById(page).classList.remove('hidden');  // Show the selected page
+        }
+
+        // Default to showing the home page on load
+        showPage('home');
+    </script>
+
+</body>
+</html>
